@@ -3,45 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Word Charades — Support</title>
+<title>Word Charades — The Hilarious Word Party Game</title>
+<meta name="description" content="Word Charades is the fast-paced party game where you act, describe and guess before time runs out. Free to play with friends and family.">
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-  h1 { color: #1a4fd8; }
-  h2 { margin-top: 32px; color: #333; }
-  code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
-  a { color: #1a4fd8; }
-  .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 14px; color: #666; }
+  :root { --blue: #1a4fd8; --ink: #1f2430; --muted: #5b6472; --bg: #f7f8fb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); line-height: 1.6; background: var(--bg); }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .nav { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 18px 20px; }
+  .nav .brand { font-weight: 700; font-size: 18px; color: var(--ink); }
+  .nav a.brand:hover { text-decoration: none; }
+  .nav .links a { margin-left: 22px; font-size: 15px; }
+  .hero { background: linear-gradient(135deg, #1a4fd8 0%, #6c3ff0 100%); color: #fff; padding: 72px 20px 84px; text-align: center; }
+  .hero h1 { font-size: 44px; letter-spacing: -0.5px; margin-bottom: 14px; }
+  .hero .tagline { font-size: 19px; max-width: 560px; margin: 0 auto 30px; opacity: .94; }
+  .hero .cta { display: inline-block; background: #fff; color: var(--blue); font-weight: 600; padding: 13px 28px; border-radius: 999px; }
+  .hero .cta:hover { text-decoration: none; transform: translateY(-1px); }
+  .hero .note { display: block; margin-top: 14px; font-size: 13px; opacity: .8; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 20px; }
+  section { padding: 46px 0; }
+  h2 { font-size: 26px; margin-bottom: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 16px; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+  ol.how { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 26px 26px 26px 52px; max-width: 640px; }
+  ol.how li { margin-bottom: 12px; }
+  ol.how li:last-child { margin-bottom: 0; }
+  .app-store { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 30px; text-align: center; }
+  .app-store h3 { margin-bottom: 8px; }
+  .app-store p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+  footer { border-top: 1px solid #e6e9f0; margin-top: 30px; padding: 26px 20px; font-size: 14px; color: var(--muted); text-align: center; }
+  footer a { margin: 0 8px; }
+  @media (max-width: 600px) { .hero { padding: 54px 16px 64px; } .hero h1 { font-size: 34px; } .nav .links a { margin-left: 14px; } }
 </style>
 </head>
 <body>
-  <h1>Word Charades — Support</h1>
-  <p>Thank you for playing Word Charades! If you have questions, feedback or run into any issue, this page will help you.</p>
+  <nav class="nav">
+    <a class="brand" href="/">Word Charades</a>
+    <div class="links">
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </nav>
 
-  <h2>How to play</h2>
-  <p>One player holds the phone and sees a secret word. Describe it or act it out without saying the word itself. Your teammates guess; tap <b>Correct</b> on a hit or <b>Skip</b> to move on. Score as many words as you can before the countdown ends.</p>
+  <header class="hero">
+    <h1>Word Charades</h1>
+    <p class="tagline">Act it out, guess fast, beat the clock! A hilarious word party game for friends and family.</p>
+    <!-- 上线后把 href 换成真实的 App Store 链接，例如 https://apps.apple.com/app/idXXXXXXX -->
+    <a class="cta" href="#">Coming soon on the App Store</a>
+    <span class="note">Free to download · No account needed</span>
+  </header>
 
-  <h2>Frequently asked questions</h2>
-  <p><b>Q: Why does the app ask for tracking permission?</b><br>
-  Word Charades is free and supported by ads served by Google AdMob. With your permission, the app may share the advertising identifier with ad partners to show more relevant ads. You can decline — the game remains fully playable.</p>
+  <div class="wrap">
+    <section>
+      <h2>How to play</h2>
+      <ol class="how">
+        <li>One player holds the phone and sees a secret word.</li>
+        <li>Describe it or act it out — but do not say the word itself.</li>
+        <li>Teammates shout their guesses; tap <b>Correct</b> on a hit, tap <b>Skip</b> to move on.</li>
+        <li>Score as many words as you can before the countdown ends.</li>
+      </ol>
+    </section>
 
-  <p><b>Q: Why is there no sound / voice feature?</b><br>
-  Word Charades is a spoken, face-to-face party game — audio and speech features are not required to play.</p>
+    <section>
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="card"><h3>🎉 Built-in word packs</h3><p>From elementary to advanced — fun for kids and adults alike.</p></div>
+        <div class="card"><h3>✏️ Custom word packs</h3><p>Create your own packs with inside jokes and private words.</p></div>
+        <div class="card"><h3>⏱ Quick rounds</h3><p>Live scoring keeps the party moving, round after round.</p></div>
+        <div class="card"><h3>👥 2+ players</h3><p>Playable by two or more people — perfect for parties and family nights.</p></div>
+        <div class="card"><h3>📴 Works offline</h3><p>No internet required to play. Words are built in.</p></div>
+        <div class="card"><h3>🔒 Privacy-friendly</h3><p>No account, no sign-up. Read our <a href="/privacy">Privacy Policy</a>.</p></div>
+      </div>
+    </section>
 
-  <p><b>Q: Can I add my own words?</b><br>
-  Yes. The app supports custom word packs that you create on your own device.</p>
+    <section class="app-store">
+      <h3>Ready to play?</h3>
+      <p>Word Charades is free to download and supported by ads.</p>
+      <!-- 上线后替换为 App Store 徽章 <img src="https://.../app-store-badge.svg"> -->
+      <a class="cta" href="#" style="display:inline-block;background:#1a4fd8;color:#fff;font-weight:600;padding:13px 28px;border-radius:999px;">Coming soon on the App Store</a>
+    </section>
+  </div>
 
-  <p><b>Q: Does the game need an internet connection?</b><br>
-  No. The game itself works offline; an internet connection is only needed to load ads.</p>
-
-  <p><b>Q: I found a bug or have a suggestion. How do I contact you?</b><br>
-  Email us at the address below.</p>
-
-  <h2>Contact</h2>
-  <p>Support email: <a href="mailto:TinglerCassity62@outlook.com">TinglerCassity62@outlook.com</a></p>
-
-  <h2>Privacy</h2>
-  <p>Read our <a href="privacy.html">Privacy Policy</a>.</p>
-
-  <div class="footer">© 2026 Dawson Carmela Lara · Word Charades</div>
+  <footer>
+    © 2026 Dawson Carmela Lara · Word Charades
+    <a href="/support">Support</a> · <a href="/privacy">Privacy Policy</a>
+  </footer>
 </body>
 </html>
