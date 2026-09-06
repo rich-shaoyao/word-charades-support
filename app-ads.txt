@@ -1,0 +1,4 @@
+# app-ads.txt — Word Charades
+# 注意：发布商 ID 尚未就绪。拿到正式 AdMob 发布商 ID（AdMob 控制台 > 账号信息，pub- 后 16 位数字）
+# 后，把下面 pub-0000000000000000 替换为真实 ID 再 push，Google 才会开始校验本文件的广告授权。
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
