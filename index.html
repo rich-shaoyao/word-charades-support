@@ -3,45 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cluvio — The Fast-Paced Word Guessing Party Game</title>
-<meta name="description" content="Cluvio is a fast, face-to-face word guessing party game. One player types a secret word, describes it out loud, and the team races to guess before the clock runs out. Free to download.">
+<title>Flip Chess — Dark Xiangqi: One Move to Flip It</title>
+<meta name="description" content="Flip Chess is a dark Xiangqi board game. All 32 points are set, both Generals start face-up, and the other 30 pieces are face-down and shuffled Red and Black together. Push a hidden piece to reveal it — pure xiangqi movement, no rank-based eating. Play offline against the computer or a friend.">
 <style>
-  :root { --grape: #7d3bed; --bubble: #ed4799; --tangerine: #fa913d; --ink: #211242; --muted: #5b6472; --bg: #f7f8fb; }
+  :root { --gold: #c49b44; --gold-light: #ebd08a; --gold-deep: #8a6e33; --bg: #14100a; --panel: #1e1810; --border: #3a3122; --text: #ece4d2; --dim: #b7ae99; --faint: #8a8272; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); line-height: 1.6; background: var(--bg); }
-  a { color: var(--grape); text-decoration: none; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); line-height: 1.65; background: var(--bg); }
+  a { color: var(--gold-light); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .nav { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 18px 20px; }
-  .nav .brand { font-weight: 700; font-size: 18px; color: var(--ink); }
+  .nav .brand { font-weight: 600; font-size: 18px; color: var(--text); letter-spacing: .5px; }
   .nav a.brand:hover { text-decoration: none; }
   .nav .links a { margin-left: 22px; font-size: 15px; }
-  .hero { background: linear-gradient(135deg, var(--grape) 0%, var(--bubble) 55%, var(--tangerine) 100%); color: #fff; padding: 72px 20px 84px; text-align: center; }
-  .hero h1 { font-size: 46px; letter-spacing: -0.5px; margin-bottom: 14px; }
-  .hero .tagline { font-size: 19px; max-width: 580px; margin: 0 auto 30px; opacity: .95; }
-  .hero .cta { display: inline-block; background: #fff; color: var(--grape); font-weight: 600; padding: 13px 28px; border-radius: 999px; }
-  .hero .cta:hover { text-decoration: none; transform: translateY(-1px); }
-  .hero .note { display: block; margin-top: 14px; font-size: 13px; opacity: .85; }
+  .hero { background: radial-gradient(circle at 50% 0%, #2a2114 0%, var(--bg) 70%); border-bottom: 1px solid var(--border); padding: 76px 20px 86px; text-align: center; }
+  .hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: 50px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px;
+             background: linear-gradient(180deg, #fbf0cf 0%, var(--gold) 55%, var(--gold-deep) 100%);
+             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero .kicker { font-size: 12.5px; font-weight: 500; letter-spacing: 2.2px; color: var(--faint); margin-bottom: 18px; }
+  .hero .tagline { font-size: 19px; max-width: 620px; margin: 0 auto 30px; color: var(--dim); }
+  .hero .cta { display: inline-block; background: linear-gradient(180deg, var(--gold-light), var(--gold) 60%, #a07c33); color: #20160a; font-weight: 600; padding: 14px 30px; border-radius: 999px; }
+  .hero .cta:hover { text-decoration: none; }
+  .hero .note { display: block; margin-top: 14px; font-size: 13px; color: var(--faint); }
   .wrap { max-width: 960px; margin: 0 auto; padding: 20px; }
   section { padding: 46px 0; }
-  h2 { font-size: 26px; margin-bottom: 22px; }
+  h2 { font-family: Georgia, "Times New Roman", serif; font-size: 26px; margin-bottom: 22px; color: var(--gold-light); }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-  .card { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 22px; }
-  .card h3 { font-size: 16px; margin-bottom: 6px; }
-  .card p { color: var(--muted); font-size: 14.5px; }
-  ol.how { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 26px 26px 26px 52px; max-width: 660px; }
-  ol.how li { margin-bottom: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 16px; margin-bottom: 6px; color: var(--gold-light); }
+  .card p { color: var(--dim); font-size: 14.5px; }
+  ol.how { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 26px 26px 26px 52px; max-width: 720px; }
+  ol.how li { margin-bottom: 12px; color: var(--dim); }
+  ol.how li b { color: var(--text); }
   ol.how li:last-child { margin-bottom: 0; }
-  .app-store { background: #fff; border: 1px solid #e6e9f0; border-radius: 14px; padding: 30px; text-align: center; }
-  .app-store h3 { margin-bottom: 8px; }
-  .app-store p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
-  footer { border-top: 1px solid #e6e9f0; margin-top: 30px; padding: 26px 20px; font-size: 14px; color: var(--muted); text-align: center; }
+  .diff { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--gold-light); font-size: 13.5px; letter-spacing: .4px; }
+  td { color: var(--dim); }
+  tr:last-child td { border-bottom: 0; }
+  .app-store { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 30px; text-align: center; }
+  .app-store h3 { margin-bottom: 8px; color: var(--gold-light); font-size: 18px; }
+  .app-store p { color: var(--dim); font-size: 15px; margin-bottom: 20px; }
+  footer { border-top: 1px solid var(--border); margin-top: 30px; padding: 26px 20px; font-size: 14px; color: var(--faint); text-align: center; }
   footer a { margin: 0 8px; }
-  @media (max-width: 600px) { .hero { padding: 54px 16px 64px; } .hero h1 { font-size: 34px; } .nav .links a { margin-left: 14px; } }
+  @media (max-width: 600px) { .hero { padding: 56px 16px 66px; } .hero h1 { font-size: 36px; } .nav .links a { margin-left: 14px; } }
 </style>
 </head>
 <body>
   <nav class="nav">
-    <a class="brand" href="/">Cluvio</a>
+    <a class="brand" href="/">Flip Chess</a>
     <div class="links">
       <a href="/support">Support</a>
       <a href="/privacy">Privacy</a>
@@ -49,48 +59,68 @@
   </nav>
 
   <header class="hero">
-    <h1>Cluvio</h1>
-    <p class="tagline">One word, one clue-giver, one clock. Describe it any way you like — just don't say it — and let your team guess.</p>
+    <h1>Flip Chess</h1>
+    <p class="kicker">DARK XIANGQI · ONE MOVE TO FLIP IT</p>
+    <p class="tagline">The board is set, but you can only see two pieces. Thirty others are face-down — Red and Black shuffled together. Push one to find out what it is.</p>
     <!-- 上线后把 href 换成真实的 App Store 链接，例如 https://apps.apple.com/app/idXXXXXXX -->
     <a class="cta" href="#">Coming soon on the App Store</a>
-    <span class="note">Free to download · Supported by ads · No account needed</span>
+    <span class="note">Free · No ads · No account · Plays offline</span>
   </header>
 
   <div class="wrap">
     <section>
       <h2>How to play</h2>
       <ol class="how">
-        <li><b>Set the word.</b> Type a single word and keep the screen to yourself — nobody else should read it.</li>
-        <li><b>Hit Start Timer.</b> The clock starts the moment you tap, and it runs for the whole word.</li>
-        <li><b>Describe it.</b> Explain the word out loud. Say anything except the word itself.</li>
-        <li><b>Correct or Skip.</b> Tap <b>Correct</b> when someone guesses it. Tap <b>Skip</b> to move on.</li>
-        <li><b>Only correct counts.</b> Your final score is how many words were guessed. A skip doesn't score, but it does use up one of your words.</li>
+        <li><b>Setup.</b> All 32 standard Xiangqi points are filled. Both Generals start face-up on their own back-rank centre. The other 30 pieces are face-down and shuffled together — Red and Black mixed. You never know who stands where, or whose piece it is.</li>
+        <li><b>Turn.</b> Each turn you step one of your pieces. There is no “flip in place” — the only way to reveal a hidden piece is to move it.</li>
+        <li><b>Reveal by pushing.</b> A hidden piece flips face-up the moment it finishes its move. It may turn out to be your Chariot — or your opponent’s.</li>
+        <li><b>Hidden pieces move.</b> A face-down piece moves according to the standard piece of the point it occupies. On a Chariot point it slides like a Chariot; on a Soldier point it steps one square forward. It flips after moving, and from then on follows its real identity.</li>
+        <li><b>Capturing.</b> You can capture the opponent’s face-up pieces, and hidden pieces sitting in the opponent’s half — no matter who they really belong to. Hidden pieces in your own half can never be captured; push them out to deal with them.</li>
+        <li><b>Movement.</b> Once face-up, standard Xiangqi rules apply: the Chariot slides, the Horse moves in an L (and its leg can be blocked), the Cannon captures over exactly one screen.</li>
+        <li><b>House rules.</b> Advisors and Elephants may cross the river and enter the palace. The General stays inside its own 3×3 palace. Soldiers never move backward and may step sideways once across the river.</li>
+        <li><b>Winning.</b> Capture the enemy General to win. A side with no legal move loses. 60 moves each with no capture and no flip is a draw.</li>
       </ol>
+    </section>
+
+    <section>
+      <h2>Not the flipping game you may have played</h2>
+      <p style="color:var(--dim);max-width:720px;margin-bottom:18px;">
+        In the classic “flip chess” (暗棋) played in Taiwan, pieces are eaten by rank — General beats Advisor, Advisor beats Elephant, and so on. That is a game of comparing sizes, with no movement to master.
+        Flip Chess keeps the hidden board but throws away the ranking: <b style="color:var(--text);">placement is luck, the game is skill</b>.
+      </p>
+      <div class="diff">
+        <table>
+          <tr><th>&nbsp;</th><th>Classic flip chess</th><th>Flip Chess</th></tr>
+          <tr><td>Side of a hidden piece</td><td>Your half is your colour</td><td>30 pieces shuffled Red/Black — ownership is unknown</td></tr>
+          <tr><td>Can hidden pieces move?</td><td>No — you flip, then it is over</td><td>Yes — a hidden piece moves by its point, then flips. No flip-in-place.</td></tr>
+          <tr><td>How pieces are captured</td><td>By rank</td><td>By reachable move plus the target’s identity</td></tr>
+          <tr><td>Technical depth</td><td>Almost none</td><td>Horse legs, cannon screens, river crossing, the palace — all kept</td></tr>
+        </table>
+      </div>
     </section>
 
     <section>
       <h2>Features</h2>
       <div class="grid">
-        <div class="card"><h3>✍️ Your own words</h3><p>Every round starts with a word you type yourself — inside jokes, tricky ones, anything your group loves.</p></div>
-        <div class="card"><h3>🎲 Surprise me</h3><p>Stuck for ideas? Tap Surprise me to pull a random word from the built-in word bank.</p></div>
-        <div class="card"><h3>⏱ Adjustable round time</h3><p>Pick 10, 20, 30 or 60 seconds per word, or set any length from 5 to 300 seconds.</p></div>
-        <div class="card"><h3>🎯 Choose how many words</h3><p>Play 5, 10, 15 or 20 words a game — or set any count from 1 to 50.</p></div>
-        <div class="card"><h3>👥 Two or more players</h3><p>One person gives the clues, everyone else guesses. Ideal for parties and family nights.</p></div>
-        <div class="card"><h3>📴 Plays offline</h3><p>The game itself needs no internet connection — an ad may load when you are online, but play never depends on it.</p></div>
-        <div class="card"><h3>🔒 Privacy-friendly</h3><p>No account, no sign-up, and your words never leave your device. Read our <a href="/privacy">Privacy Policy</a>.</p></div>
+        <div class="card"><h3>🎴 A board you cannot read</h3><p>Thirty face-down pieces shuffled into one pile. Every move is a real decision, because every move might reveal an enemy.</p></div>
+        <div class="card"><h3>♟️ Real xiangqi underneath</h3><p>Chariots slide, Horses can be leg-blocked, Cannons need exactly one screen. The hidden board never blunts the rules.</p></div>
+        <div class="card"><h3>🤖 Play the computer</h3><p>Three levels — Easy, Normal and Hard — so a first game and a hundredth game both feel right.</p></div>
+        <div class="card"><h3>👥 Two players, one device</h3><p>Pass the phone and play a friend. Great for a commute or a table between two chairs.</p></div>
+        <div class="card"><h3>📴 Fully offline</h3><p>No internet connection is ever used. Play on a plane, on the subway, anywhere.</p></div>
+        <div class="card"><h3>🔒 Nothing collected</h3><p>No ads, no sign-up, no account, no tracking. The app collects no data at all — read our <a href="/privacy">Privacy Policy</a>.</p></div>
       </div>
     </section>
 
     <section class="app-store">
-      <h3>Ready to play?</h3>
-      <p>Cluvio is free to download and supported by ads.</p>
+      <h3>Ready to flip?</h3>
+      <p>Flip Chess is free, with no ads and no in-app purchases.</p>
       <!-- 上线后替换为 App Store 徽章 <img src="https://.../app-store-badge.svg"> -->
-      <a class="cta" href="#" style="display:inline-block;background:#7d3bed;color:#fff;font-weight:600;padding:13px 28px;border-radius:999px;">Coming soon on the App Store</a>
+      <a class="cta" href="#" style="display:inline-block;background:linear-gradient(180deg,#ebd08a,#c49b44 60%,#a07c33);color:#20160a;font-weight:600;padding:14px 30px;border-radius:999px;">Coming soon on the App Store</a>
     </section>
   </div>
 
   <footer>
-    © 2026 Dawson Carmela Lara · Cluvio · Contact: <a href="mailto:chenweidong@yianzhixin.cn">chenweidong@yianzhixin.cn</a>
+    © 2026 Dawson Carmela Lara · Flip Chess · Contact: <a href="mailto:chenweidong@yianzhixin.cn">chenweidong@yianzhixin.cn</a>
     <a href="/support">Support</a> · <a href="/privacy">Privacy Policy</a>
   </footer>
 </body>
